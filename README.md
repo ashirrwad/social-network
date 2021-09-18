@@ -38,6 +38,40 @@
         db.createCollection('topics')
         ```
 
-    * The rest of the steps to import the data and run the app are the same as in Linux
+   Download the project into the filesystem 
+
+* Unzip it
+
+* Now we need to import the data into the mongodb database collections
+
+* Open a terminal & go to the downloaded project's directory & run the following commands one after another
+    ```bash
+    mongoimport --db social_network_db --collection users --drop --file ./mongodb-database/users.json --jsonArray
+    ```
+
+    ```bash
+    mongoimport --db social_network_db --collection questions --drop --file ./mongodb-database/questions.json --jsonArray
+    ```
+
+    ```bash
+    mongoimport --db social_network_db --collection answers --drop --file ./mongodb-database/answers.json --jsonArray
+    ```
+    
+    ```bash
+    mongoimport --db social_network_db --collection topics --drop --file ./mongodb-database/topics.json --jsonArray
+    ```
+* Always from the project's directory, run 
+    ```bash
+    npm install
+    ```
+    to install npm dependencies
+
+* ALways from the project's directory, run:
+    ```bash
+    npm run startdev
+    ```
+    To run the app
+
+* go to http://locahost:3000
 
    
